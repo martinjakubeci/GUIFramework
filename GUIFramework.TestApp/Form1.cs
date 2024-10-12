@@ -62,29 +62,10 @@ namespace GUIFramework.TestApp
             state.Input2 = await GetInput().MapTo(state.Input2);
 
             MessageBox.Show($"{state.Input1}{Environment.NewLine}{state.Input2}");
-
-            /*using (var state = mainViewModel.GetWizardState<State>())
-            {
-                state.kjnaksdkja = await RouteTo<InputViewModel>().MapTo(state.kjnaksdkja);
-            }*/
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var lines = File.ReadAllLines("C:\\Users\\marti\\Downloads\\Xamba productlist-final.csv");
-            var result = new List<string>();
-
-            for(int i = 0; i < lines.Length; i++)
-            {
-                var line = lines[i];
-
-                if (i != 0)
-                    line += ";;;;;;";
-
-                result.Add(line);
-            }
-
-            File.WriteAllLines("C:\\Users\\marti\\Downloads\\Xamba productlist-final2.csv", result.ToArray());
         }
     }
 }
